@@ -7,6 +7,7 @@
 import sys
 import os
 import platform
+import time
 
 class ShortMessageService:
 
@@ -34,3 +35,11 @@ class ShortMessageService:
             os.system("clear")
         else:
             print("Plataforma no soportada")
+
+    def add_Message (self):
+        fechaHora = time.strftime("%c")
+        print("\n====== Agregar un nuevo mensaje ======")
+        self.MessageService.append(
+            input("Escriba el mensaje: \n" + time.strftime("%c")))
+        self.press_enter()
+
